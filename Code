@@ -1,0 +1,31 @@
+password = input("Enter password: ")
+alpha = 0
+digit = 0
+upper = 0
+lower = 0
+space = 0
+splchar = 0
+
+for i in range(len(password)):
+    if password[i].isdigit():
+        digit += 1
+    elif password[i].isalpha():
+        alpha +=1
+    elif password[i] == " ":
+        space += 1
+    else:
+        splchar += 1
+
+
+for j in range(len(password)):
+    if password[j].isupper():
+        upper+=1
+    elif password[j].islower():
+        lower+=1
+
+print("Alpha:", alpha)
+print("Digit:", digit)
+print("Upper Case:", upper)
+print("Lower Case:", lower)
+print("Space:", space)
+print("Special Char:", splchar)
